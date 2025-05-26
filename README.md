@@ -15,28 +15,22 @@ End the program.
  #include <stdio.h>
  #include <stdlib.h>
  #include <time.h>
- int main()
- {
- int count, min, max;
- printf("Enter the number of random numbers to generate: ");
- scanf("%d", &count);
- printf("Enter the minimum value: ");
- scanf("%d", &min);
- printf("Enter the maximum value: ");
- scanf("%d", &max);
- srand(time(NULL));
- printf("Pseudorandom numbers:\n");
- for (int i = 0; i < count; i++)
- {
- int random_number = (rand() % (max- min + 1)) + min;
- printf("%d\n", random_number);
+ int main() {
+ int i, n;
+ srand(time(0));
+ printf("Enter how many pseudorandom numbers you want to generate: ");
+ scanf("%d", &n);
+ printf("Generating %d pseudorandom numbers between 0 and 99:\n", n);
+ for (i = 0; i < n; i++) {
+ int randomNumber = rand() % 100;
+ printf("%d ", randomNumber);
  }
+ printf("\n");
  return 0;
  }
 ~~~
-
 # OUTPUT:
-![image](https://github.com/user-attachments/assets/7416674c-a7f3-4eba-8579-03f69756ef13)
+![image](https://github.com/user-attachments/assets/330d0e59-8ac4-45e7-a7e9-9498e9001991)
 
 # RESULT:
-The program is executed successfully.
+ The program is executed successfully.
